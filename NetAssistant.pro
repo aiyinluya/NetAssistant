@@ -17,12 +17,14 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
     mainwindow.cpp \
-    TcpServer.cpp
+    TcpServer.cpp \
+    plainTextEdit.cpp
 
 HEADERS  += \
     define.h \
     mainwindow.h \
-    TcpServer.h
+    TcpServer.h \
+    plainTextEdit.h
 
 FORMS    += \
     mainwindow.ui

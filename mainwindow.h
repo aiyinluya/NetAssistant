@@ -1,11 +1,12 @@
-﻿#ifndef MAINWINDOW_H
+#ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
 #include <QMainWindow>
 #include <QtNetwork>
 #include <QDataStream>
 #include <QTextStream>
-#include  "TcpServer.h"
+#include "TcpServer.h"
+#include "plainTextEdit.h"
 
 namespace Ui {
 class MainWindow;
