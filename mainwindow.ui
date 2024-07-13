@@ -1106,7 +1106,7 @@
   <customwidget>
    <class>PlainTextEdit</class>
    <extends>QPlainTextEdit</extends>
-   <header>C:/Users/lzoio/Documents/myQT/NetAssistant/plainTextEdit.h</header>
+   <header>plainTextEdit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

@@ -27,6 +27,8 @@ HEADERS  += \
     TcpServer.h \
     plainTextEdit.h
 
+INCLUDEPATH +=../
+
 FORMS    += \
     mainwindow.ui
 
