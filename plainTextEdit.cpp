@@ -3,7 +3,7 @@
 PlainTextEdit::PlainTextEdit(QWidget *parent)
     : QPlainTextEdit(parent), historyIndex(-1)
 {
-    history << "历史记录1" << "历史记录2" << "历史记录3"; // 示例历史记录
+    history.clear();
 }
 
 void PlainTextEdit::keyPressEvent(QKeyEvent *event) {
@@ -26,4 +26,8 @@ void PlainTextEdit::keyPressEvent(QKeyEvent *event) {
     } else {
         QPlainTextEdit::keyPressEvent(event);
     }
+}
+
+void PlainTextEdit::addHistory(const QString& value) {
+    history.append(value);
 }

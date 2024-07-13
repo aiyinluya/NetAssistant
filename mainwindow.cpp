@@ -265,7 +265,7 @@ void MainWindow::toSendData()
     QByteArray datagram;
 
     if(ui->cBox_SndHexDisp->checkState()) {
-        QStringList hexStr = ui->tEditSendText->toPlainText().split(" ", QString::SkipEmptyParts);
+        QStringList hexStr = ui->tEditSendText->toPlainText().split(" ", Qt::SkipEmptyParts);
         int hexSize = hexStr.size();
         for(int i = 0; i < hexSize; i++) {
             QString hexSubStr = hexStr.at(i);
@@ -278,6 +278,8 @@ void MainWindow::toSendData()
 
     if(datagram.size() == 0)
         return;
+    // 将发送的数据添加到历史记录
+    ui->tEditSendText->addHistory(datagram);
 
     if(ui->cBoxNetType->currentIndex() == UDP_MODE) {
         udpSocket->writeDatagram(datagram.data(), datagram.size(), rmtAddr, rmtPort);
@@ -768,7 +770,7 @@ void MainWindow::on_cBox_SndHexDisp_clicked(bool checked)
         }
     } else {
         if(ui->tEditSendText->toPlainText().length() != 0) {
-            QStringList hexStr = ui->tEditSendText->toPlainText().split(" ", QString::SkipEmptyParts);
+            QStringList hexStr = ui->tEditSendText->toPlainText().split(" ", Qt::SkipEmptyParts);
             int hexSize = hexStr.size();
             qDebug() << QString::number(hexSize, 10);
             for(int i = 0; i < hexSize; i++) {

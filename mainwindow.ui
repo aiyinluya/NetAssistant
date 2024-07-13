@@ -168,7 +168,6 @@
              <property name="font">
               <font>
                <pointsize>11</pointsize>
-               <weight>75</weight>
                <bold>true</bold>
               </font>
              </property>
@@ -853,7 +852,6 @@
              <font>
               <family>SimSun-ExtB</family>
               <pointsize>11</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -1034,7 +1032,6 @@
         </property>
         <property name="font">
          <font>
-          <weight>75</weight>
           <bold>true</bold>
           <underline>true</underline>
          </font>
@@ -1082,7 +1079,7 @@
      <x>0</x>
      <y>0</y>
      <width>489</width>
-     <height>23</height>
+     <height>18</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -1109,7 +1106,7 @@
   <customwidget>
    <class>PlainTextEdit</class>
    <extends>QPlainTextEdit</extends>
-   <header>/home/lz/Documents/github/NetAssistant/plainTextEdit.h</header>
+   <header>C:/Users/lzoio/Documents/myQT/NetAssistant/plainTextEdit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

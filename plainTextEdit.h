@@ -14,6 +14,7 @@ class PlainTextEdit : public QPlainTextEdit
     Q_OBJECT
 public:
     explicit PlainTextEdit(QWidget *parent = nullptr);
+    void addHistory(const QString& value);
 
 protected:
     void keyPressEvent(QKeyEvent *event) override;
