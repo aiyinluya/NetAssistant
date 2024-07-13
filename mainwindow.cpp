@@ -81,8 +81,7 @@ void MainWindow::on_pBtnNetCnnt_clicked(bool checked)
             lhAddr.setAddress(ui->lEditIpAddr->text());
             lhPort = ui->lEditIpPort->text().toInt();
 
-            if(! slotTryCreateTcpServer())
-            {
+            if(! slotTryCreateTcpServer()) {
                 ui->pBtnNetCnnt->setChecked(0);
                 QMessageBox::information(this, tr("错误"), tr("尝试建立服务器失败! 请确认网络状态和端口。"));
                 return;
@@ -91,8 +90,7 @@ void MainWindow::on_pBtnNetCnnt_clicked(bool checked)
         } else if(ui->cBoxNetType->currentIndex() == TCP_CLIENT_MODE) {
             //建立TCP客户端
             QString ip = ui->lEditIpAddr->text();
-            if(!rmtServerIP->setAddress(ip))
-            {
+            if(!rmtServerIP->setAddress(ip)) {
                 QMessageBox::information(this, tr("错误"), tr("TCP服务器IP设置失败!"));
                 return;
             }
@@ -284,8 +282,12 @@ void MainWindow::toSendData()
     if(ui->cBoxNetType->currentIndex() == UDP_MODE) {
         udpSocket->writeDatagram(datagram.data(), datagram.size(), rmtAddr, rmtPort);
     } else if(ui->cBoxNetType->currentIndex() == TCP_SERVER_MODE) {
-        int idx = ui->cBoxClients->currentIndex() ;
-        if(idx == 0) {
+        int idx = ui->cBoxClients->currentIndex();
+        if (idx == -1) {
+            QMessageBox::information(this, tr("提示"), tr("还没有连接的客户端！"));
+            return;
+        }
+        else if(idx == 0) {
             emit sendDataToClient((char *)datagram.data(), datagram.size(), 0, 0);
         } else {
             emit sendDataToClient((char *)datagram.data(), datagram.size(), tcpClientSocketDescriptorList.at(idx), 0);
