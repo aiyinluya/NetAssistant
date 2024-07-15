@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# 检查 /usr/share/applications/NetAssistant.desktop 是否存在
+if [ -f /usr/share/applications/NetAssistant.desktop ]; then
+    rm /usr/share/applications/NetAssistant.desktop
+    echo "/usr/share/applications/NetAssistant.desktop 已删除"
+else
+    echo "/usr/share/applications/NetAssistant.desktop 不存在"
+fi
+
+# 检查 /usr/bin/NetAssistant 是否存在
+if [ -f /usr/bin/NetAssistant ]; then
+    rm /usr/bin/NetAssistant
+    echo "/usr/bin/NetAssistant 已删除"
+else
+    echo "/usr/bin/NetAssistant 不存在"
+fi

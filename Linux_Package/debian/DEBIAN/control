@@ -1,0 +1,8 @@
+Package: NetAssistant
+Version: 1.1
+Section: free
+Priority: optional
+Depends: 
+Architecture: amd64
+Maintainer: xx@xx.com
+Description: NetAssistant on linux.

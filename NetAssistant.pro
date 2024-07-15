@@ -46,3 +46,5 @@ TRANSLATIONS += language/English.ts \
                 language/Chinese.ts
 
 ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
+
+DESTDIR = $$PWD/build

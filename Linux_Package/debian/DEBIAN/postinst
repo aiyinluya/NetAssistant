@@ -1,0 +1,3 @@
+# !/bin/sh
+cp /opt/NetAssistant/Desktop_File/NetAssistant.desktop /usr/share/applications
+cp /opt/NetAssistant/NetAssistant /usr/bin
