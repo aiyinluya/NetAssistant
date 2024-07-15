@@ -14,3 +14,6 @@ fi
 # 拷贝库文件和可执行程序到目标文件夹
 cp $liblist $dst
 cp $appname $dst
+
+
+# dpkg -b package NetAssistant-v1.1.deb

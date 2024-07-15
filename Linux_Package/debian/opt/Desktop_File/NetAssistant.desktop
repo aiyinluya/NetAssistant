@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=NetAssistant
+Comment=Network Assistant Tool
+Terminal=false
+Path=/opt/NetAssistant
+Exec=/usr/bin/NetAssistant
+Type=Application
+Icon=/opt/NetAssistant/NetAssistant.png
+Categories=Utility;Network;
+
+
